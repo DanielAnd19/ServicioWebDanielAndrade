@@ -1,0 +1,14 @@
+/////////////////////SCRIPT BASE DE DATOS//////////////////////////
+
+CREATE DATABASE sys13
+
+CREATE TABLE departamentos(id_dep INT NOT NULL AUTO_INCREMENT,
+                          nombre VARCHAR(50) NOT NULL,
+                          PRIMARY KEY (id_dep));
+
+
+CREATE TABLE empleado(id_emp INT NOT NULL AUTO_INCREMENT,
+                      	  id_depa INT NOT NULL,
+                          nombre VARCHAR(50) NOT NULL,     	  
+                          PRIMARY KEY (id_emp),
+                          FOREIGN KEY (id_depa) REFERENCES departamentos(id_dep));                      
